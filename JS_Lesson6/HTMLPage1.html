@@ -1,0 +1,63 @@
+﻿<!--Практика:
+1. Создать форму с произвольными элементами input(text), input(checkbox),
+    input(radio), input(hidden), textarea, select. Заполнить их значения произвольно.
+    По нажатию кнопки, сделать вывод списка элементов с их типом и значением.
+
+2. После загрузки документа (DOMContentLoaded), сделать дублирование формы
+    созданной выше, дать ей новое имя. Так сделать 3 формы на одной странице с разными именами.
+    Событие кнопки, выводящей список элементов, должно выводить список только текущей формы,
+    внутри которой она находится. Обработчик события должен быть один на все три формы.
+
+3. Создать форму с несколькими полями ввода input(text) и несколькими textarea.
+    У каждого поля ввода должно быть уникальное имя.
+    Создать div на странице. В див выводить лог операций по
+    копированию, вставке и вырезанию текста из input и textarea
+    в виде:
+        input[inputname], copy: <text>
+    textarea[inputname], paste: <text>
+
+        Где <text>
+            это текст, который вырезали (скопировали/вставили)-->
+
+
+
+            <!DOCTYPE html>
+
+            <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <meta charset="utf-8" />
+                <title></title>
+            </head>
+            <body>
+                <form id="Form1">
+                    <!--1)-->
+                    <input name="myInput1" value="just text">
+                    <input name="myInput2" value="just text">
+                    <br>
+                    <input name="myChaeckBox1" type="checkbox">
+                    <input name="myChaeckBox2" type="checkbox">
+                    <input name="myChaeckBox3" type="checkbox">
+                    <br>
+                    <input name="myRadioButton" type="radio" value="male">
+                    <input name="myRadioButton" type="radio" value="female">
+                    <br>
+                    <input name="myHidden" type="hidden" value="id">
+                    <br>
+                    <textarea name="myText">Just text</textarea>
+                    <br>
+                    <select name="mySelect">
+                        <option value="Select1">Select1</option>>
+                        <option value="Select2">Select2</option>>
+                        <option value="Select3">Select3</option>>
+                    </select>
+                    <div id="DIV"></div>
+
+                    <input type="button" name="buttonw" id="Button" value="Button">
+
+
+                </form>
+
+                <script src="JavaScript1.js"></script>
+
+            </body>
+        </html>
